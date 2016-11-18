@@ -4,9 +4,9 @@ package task1calculator;
 public class Calculator {
     public static void main(String[] args) {
 
-        int operand1 = 20;
-        int operand2 = 3;
-        int operand = 0;
+        double operand1 = 10;
+        double operand2 = 3;
+        double operand = 0;
         double operand3 = 6.5;
         String operation = "/";
 
@@ -14,8 +14,8 @@ public class Calculator {
         if (operation.equals("-")) operand = operand1 - operand2;
         if (operation.equals("*")) operand = operand1 * operand2;
         if (operation.equals("%")) {
-            operand3 = operand1 % operand2;
-            System.out.println(operand3);
+            operand = operand1 % operand2;
+            //System.out.println(operand3);
         }
 
 
