@@ -7,7 +7,7 @@ package ua.com.hillel;
 
 public class Main {
     public static void main(String[] args) {
-    Integer intVar = 11;
+    Integer intVar = 12;
         System.out.println(intVar);
 
     }
