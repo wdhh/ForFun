@@ -1,6 +1,8 @@
 package ua.com.hillel.hometasks.session3;
 import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Random;
+
 /**
  * Created by dreasty on 20.11.16.
  *
@@ -19,10 +21,18 @@ import java.util.Random;
 public class Array10x10 {
     public static void main(String[] args) {
         int[] a;
-        a = new int[10] ;
-        int len = a.length;
-        for(len = 12; len++; ){
-        a.
+        a = new int[12] ;
+        for(int i=0; i < a.length;){
+            Integer rand = -10 + (int)(Math.random() * ((10 -(-10)) + 1));
+            String strand = rand.toString();
+            int neg =0;
+            int pos = 0;
+            if (!Arrays.toString(a).contains(strand) && rand!=0 ){
+                (rand < 0) ? pos=pos+1: neg=neg+1;
+                a[i]=rand;
+                i++;
+            }
         }
+        System.out.println(Arrays.toString(a));
     }
 }
