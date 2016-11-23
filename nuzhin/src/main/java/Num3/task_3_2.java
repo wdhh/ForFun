@@ -29,6 +29,42 @@ package Num3;
 6 18
 5 3 10 2 4 9
 1
- */
+
+ввод два числа n 2-100000  x 2-109
+вводим  n чисел 1 - 109
+выводим два числа чья сумма максимальна и не больше x
+
+*/
+
+import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class task_3_2 {
+
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите количество подарков ");
+        int n = in.nextInt();;
+        System.out.println("Введите максимальную  сумму двух подарков ");
+        int x = in.nextInt();;
+
+         int[] Arr = new int[n];
+        for (int i = 0; i < Arr.length; i++){
+            Arr[i] = ThreadLocalRandom.current().nextInt(1 , 109 +1);
+
+        }
+
+        int result = 0;
+        for (int i = 0; i < Arr.length; i++) {
+            for (int j = i+1; j < Arr.length; j++) {
+                if (Arr[i] + Arr[j] > result && Arr[i] + Arr[j] <= x){
+                    result = Arr[i] + Arr[j];
+                }
+            }
+        }
+
+        System.out.println(result);
+
+    }
 }
