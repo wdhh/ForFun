@@ -1,8 +1,15 @@
 package task1;
 
+
+import java.util.Scanner;
+
 public class Fibonacci {
     public static void main(String[] args) {
-        int result = fibonacci(5);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n = scanner.nextInt();
+        int result = fibonacci(n);
         System.out.println(result);
     }
 

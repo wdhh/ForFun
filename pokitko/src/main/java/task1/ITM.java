@@ -40,33 +40,64 @@ public class ITM {
         twentyNinety[7] = "ninety";
 
 
-        if ( amount > 1000){
-            int rang1 = amount /1000;
-            int rang2 = amount % 1000 /100;
-            int rang3 = amount % 100 / 10;
-            int rang4 = amount % 10;
-            String rang11 = null;
-            String rang22 = null;
-            String rang33 = null;
-            String rang44 = null;
-            rang11 = oneNineteen[rang1-1];
-            if (rang2!=0) rang22 = oneNineteen[rang2-1];
-            if (rang3!=0 && rang3>=20){
-                rang33 = twentyNinety[rang3-1];
-                if (rang4!=0) rang44 = oneNineteen[rang4-1];
+if (amount<10000 && amount>0) {
+    int rang1 = amount / 1000;
+    int rang2 = amount % 1000 / 100;
+    int rang3 = amount % 100;
+    int rang4 = amount % 10;
+    String rang11 = null;
+    String rang22 = null;
+    String rang33 = null;
+    String rang44 = null;
+    if (amount / 100 >= 10) {
+        rang11 = oneNineteen[rang1 - 1];
+    }
+    if (rang2 != 0) rang22 = oneNineteen[rang2 - 1];
+    if (rang3 / 10 != 0) {
+        if (rang3 >= 20) {
+            rang33 = twentyNinety[rang3 / 10 - 2];
+            if (rang4 != 0) rang44 = oneNineteen[rang4 - 1];
+        } else {
+            if (rang3 != 0) {
+                rang33 = oneNineteen[rang3 - 1];
             }
-            if (rang3<20) rang33 = oneNineteen[rang3-1];
 
-            String total = rang11;
-            if (rang22!=null) total = total + " " + rang22;
-            if (rang33!=null) total = total + " " + rang33;
-            if (rang44!=null) total = total + " " + rang44;
-
-            System.out.println(total + " USD");
         }
 
+    } else {
+        if (rang4 != 0) rang44 = oneNineteen[rang4 - 1];
+    }
 
+    String total = null;
+    if (rang11 != null) {
+        if (rang1 == 1) {
+            total = rang11 + " thousand";
+        } else total = rang11 + " thousands";
+        if (rang22 != null) total = total + " " + rang22 + " hundred";
+        if (rang33 != null) total = total + " " + rang33;
+        if (rang44 != null) total = total + " " + rang44;
+    } else {
+        if (rang22 != null) {
+            total = rang22 + " hundred";
+            if (rang33 != null) total = total + " " + rang33;
+            if (rang44 != null) total = total + " " + rang44;
+        } else {
+            if (rang33 != null) {
+                total = rang33;
+                if (rang44 != null) total = total + " " + rang44;
+            }
+            if (rang44 != null) total = rang44;
+        }
+    }
+
+
+    System.out.println(total + " USD");
+}else System.out.println("Invalid amount");
+
+
+
+        }
 
     }
-}
+
 
