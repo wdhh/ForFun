@@ -28,16 +28,16 @@ public class Array10x10 {
             Integer rand = -10 + (int)(Math.random() * ((10 -(-10)) + 1));
             String strand = rand.toString();
             if (!Arrays.toString(a).contains(strand) && rand!=0 ){
-                if(neg < 6 && rand <0){
-                    a[i]=rand;
-                    neg++;
-                }
-
-                else if(pos < 6 && rand >0){
-                    a[i]=rand;
-                    pos++;
-                }
-
+//                if(neg < 6 && rand <0){
+//                    a[i]=rand;
+//                    neg++;
+//                }
+//
+//                else if(pos < 6 && rand >0){
+//                    a[i]=rand;
+//                    pos++;
+//                }
+                a[i]=rand;
                 i++;
             }
         }
