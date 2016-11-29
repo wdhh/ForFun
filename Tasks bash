@@ -1,0 +1,6 @@
+1. ls | grep test
+2. ls [1-2]*.log
+3. grep -Ril "import" /test
+4. sed -i -e 's/https/http/g' file.txt 
+5. sed -i -e 's/:/ : /g' file.txt
+6. sed -i -e 's/\(.\)\1/\1/g' file.txt
