@@ -1,0 +1,6 @@
+1. ls | grep test
+2. ls | grep "^[1|2].*\log$" 
+3. grep -Ril "import" /test
+4. sed -i -e 's/https/http/g' 3urls.log 
+5. sed -i -e 's/:/ : /g' 3urls.log
+6. sed -i -e 's/\(.\)\1/\1/g' 4test.log
