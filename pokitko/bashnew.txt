@@ -1,0 +1,7 @@
+1.ls | grep test(поиск во всем перечни имен папок и файлов)
+cat file.txt | grep test (поиск в конкретном файле file.txt)
+2.ls | grep -E '^(1|2)'(.log)$' file.txt
+3. ls | grep ^import$ 
+4. sed 's/https/http/g' file.txt
+5. sed -i -e 's/:/ : /g' file.txt
+6.sed -i -e 's/\(.\)\1/\1/g'
