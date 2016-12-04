@@ -1,0 +1,5 @@
+Implement the following sorting algorithms:
+- Quiq sort;
+- Merge sort;
+- Bubble sort;
+- Insertion sort.
