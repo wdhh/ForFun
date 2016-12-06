@@ -1,8 +1,6 @@
 package ua.com.hillel.eizotov.hometask;
 
-
 import java.util.Scanner;
-
 
 /**
  * Created by Ed Izotov on 01-Dec-16.
