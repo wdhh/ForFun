@@ -1,8 +1,8 @@
-/**
+package Task5; /**
  * Created by tania on 11/21/16.
  */
 import java.util.Scanner;
-public class Calculator {
+public class Task5Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -22,6 +22,7 @@ public class Calculator {
 
     public static double Calc(double value1, double value2, String function) {
         double result = 0;
+
         if (function.equals("+")) {
             result = value1 + value2;
         }
@@ -33,6 +34,13 @@ public class Calculator {
         }
         if (function.equals("/")) {
             result = value1 / value2;
+        }
+        if (function.equals(("%"))){
+            result = value1 % value2;
+        }
+        if (function.equals("abs")){
+            result = Math.abs(value1);
+
         }
         return result;
     }
