@@ -73,7 +73,7 @@ public class Calc {
             if (i == 6) {
                 System.out.println("Введите число:");
                 a = sc.nextInt();
-                System.out.println("Модуль числа  "+ a +" = "+ abc(a));
+                System.out.println("Модуль числа  "+ a +" = "+ Math.abs(a));
             }
             if (i == 0){
                 break;
@@ -98,17 +98,6 @@ public class Calc {
     }
     public static int mod(int a, int b){
         return a % b;
-    }
-    public static int abc(int a){
-        if (a == 0){
-        return 0;
-        }
-        if (a < 0){
-            return a * -1;
-        }
-        else {
-            return a;
-        }
     }
 
     }

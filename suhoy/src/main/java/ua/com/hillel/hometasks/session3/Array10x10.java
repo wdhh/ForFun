@@ -19,29 +19,32 @@ import java.util.Random;
  */
 
 public class Array10x10 {
-    public static int neg;
-    public static int pos;
+    public static int neg, pos;
+
     public static void main(String[] args) {
         int[] a;
-        a = new int[12] ;
-       for(int i=0; i < a.length;){
-            Integer rand = -10 + (int)(Math.random() * ((10 -(-10)) + 1));
+        a = new int[12];
+        for (int i = 0; i <= a.length; ) {
+            Integer rand = -10 + (int) (Math.random() * ((10 - (-10)) + 1));
             String strand = rand.toString();
-            if (!Arrays.toString(a).contains(strand) && rand!=0 ){
-//                if(neg < 6 && rand <0){
-//                    a[i]=rand;
-//                    neg++;
-//                }
-//
-//                else if(pos < 6 && rand >0){
-//                    a[i]=rand;
-//                    pos++;
-//                }
-                a[i]=rand;
+            System.out.println(strand);
+            System.out.println(i);
+            if (neg < (a.length/2) && !Arrays.toString(a).contains(strand)  && rand < 0) {
+                a[i] = rand;
+                neg++;
                 i++;
+            }
+            if (pos < (a.length/2) && !Arrays.toString(a).contains(strand)  && rand > 0) {
+                a[i] = rand;
+                pos++;
+                i++;
+            }
+            else{
+                continue;
             }
         }
         System.out.println(Arrays.toString(a));
-        System.out.println(neg+ "" + pos);
+
     }
 }
+

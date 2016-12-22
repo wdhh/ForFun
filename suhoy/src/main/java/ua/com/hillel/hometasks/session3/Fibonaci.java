@@ -14,14 +14,14 @@ public class Fibonaci {
             Scanner sc = new Scanner(System.in);
             System.out.println("Введите число:\n");
             index = sc.nextInt();
-            System.out.println(F(index));
+            System.out.println(fib(index));
         }
 
-        public static int F(int i)
+        public static int fib(int i)
         {
             if (i == 0) return 0;
             if (i <= 2) return 1;
-            return F(i - 1) + F(i - 2);
+            return fib(i - 1) + fib(i - 2);
         }
 
     }
