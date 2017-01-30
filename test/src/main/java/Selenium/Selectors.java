@@ -10,29 +10,29 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Selectors extends DriverConfig {
-    WebDriver driver;
-    public Selectors (){
-        super();
-        driver = Parameters.getDriver();
+
+    private WebDriver getDriver(){
+        return Parameters.getDriver();
     }
+
     public WebElement id(String selector){
-        return driver.findElement(By.id(selector));
+        return getDriver().findElement(By.id(selector));
     }
 
     public WebElement name(String selector){
-        return driver.findElement(By.name(selector));
+        return getDriver().findElement(By.name(selector));
     }
 
     public WebElement cssSelector(String selector){
-        return driver.findElement(By.cssSelector(selector));
+        return getDriver().findElement(By.cssSelector(selector));
     }
 
     public WebElement xpath(String selector){
-        return driver.findElement(By.xpath(selector));
+        return getDriver().findElement(By.xpath(selector));
     }
 
     public WebElement className(String selector){
-        return driver.findElement(By.className(selector));
+        return getDriver().findElement(By.className(selector));
     }
 
     public void waitForElementVisible(By locator, Integer time) {

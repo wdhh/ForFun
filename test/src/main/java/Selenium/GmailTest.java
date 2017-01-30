@@ -3,8 +3,7 @@ package Selenium;
 import Selenium.Configuration.Parameters;
 import Selenium.P.LoginPageObject;
 import Selenium.P.MailPageObject;
-import org.junit.Test;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 
 public class GmailTest extends Selectors {
@@ -31,9 +30,9 @@ public class GmailTest extends Selectors {
         mailPageObject.composeButtonClick();
     }
 
-//    @Test
+    @Test
     public void clearTrashBin(){
-        driver.get(Parameters.getUrl());
+        loginPageObject.navigateToPage();
         assertTrue(loginPageObject.isPageToLoad());
         loginPageObject.inputFiledClear();
         loginPageObject.inputPassword(Parameters.getUserPasswd());

@@ -14,10 +14,8 @@ public class LoginPageObject extends Selectors {
     String inputPasswordId = "Passwd";
     String signInButtonId = "signIn";
 
-    private static String URL = Parameters.getUrl();
-
     public void navigateToPage(){
-        Parameters.getDriver().get(URL);
+        Parameters.getDriver().get(Parameters.getUrl());
     }
     public boolean isPageToLoad(){
         return id(inputLoginId).isDisplayed();
