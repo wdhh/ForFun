@@ -1,4 +1,4 @@
-package Selenium.Configuration;
+package Selenium.configuration;
 
 import org.openqa.selenium.WebDriver;
 
@@ -14,6 +14,9 @@ public class Parameters {
     private static String userPasswd;
     private static String url;
     private static String browserName;
+    private static String gridUrl;
+    private static String gridPort;
+    private static Boolean useGrid;
 
     private static WebDriver driver;
 
@@ -29,7 +32,9 @@ public class Parameters {
         this.userPasswd = properties.getProperty("userPasswd");
         this.url = properties.getProperty("mainUrl");
         this.browserName = properties.getProperty("browserName");
-
+        this.useGrid = properties.getProperty("use.grid").toLowerCase().equals("true");
+        this.gridUrl = properties.getProperty("grid.url");
+        this.gridPort = properties.getProperty("grid.port");
     }
 
     public static String getUserName() {
@@ -54,4 +59,14 @@ public class Parameters {
         driver = currentDriver;
     }
 
+    public static String getGridUrl(){
+        return gridUrl;
+    }
+
+    public static String getGridPort(){
+        return gridPort;
+    }
+    public static Boolean useGrid() {
+        return useGrid;
+    }
 }

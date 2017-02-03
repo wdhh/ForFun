@@ -1,4 +1,4 @@
-package Selenium.P;
+package Selenium.pageObjects;
 
 import Selenium.Selectors;
 import org.openqa.selenium.By;

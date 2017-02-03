@@ -1,8 +1,8 @@
 package Selenium;
 
-import Selenium.Configuration.Parameters;
-import Selenium.P.LoginPageObject;
-import Selenium.P.MailPageObject;
+import Selenium.configuration.Parameters;
+import Selenium.pageObjects.LoginPageObject;
+import Selenium.pageObjects.MailPageObject;
 import org.testng.annotations.Test;
 
 

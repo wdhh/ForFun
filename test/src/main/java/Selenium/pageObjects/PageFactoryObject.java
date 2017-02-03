@@ -1,4 +1,4 @@
-package Selenium.P;
+package Selenium.pageObjects;
 
 /**
  * Created by IEUser on 1/13/2017.

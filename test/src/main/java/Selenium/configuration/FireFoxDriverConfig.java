@@ -1,4 +1,4 @@
-package Selenium.Configuration;
+package Selenium.configuration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

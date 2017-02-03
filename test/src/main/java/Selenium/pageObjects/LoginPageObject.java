@@ -1,6 +1,6 @@
-package Selenium.P;
+package Selenium.pageObjects;
 
-import Selenium.Configuration.Parameters;
+import Selenium.configuration.Parameters;
 import Selenium.Selectors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

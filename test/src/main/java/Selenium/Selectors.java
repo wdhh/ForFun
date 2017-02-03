@@ -1,7 +1,7 @@
 package Selenium;
 
-import Selenium.Configuration.DriverConfig;
-import Selenium.Configuration.Parameters;
+import Selenium.configuration.DriverConfig;
+import Selenium.configuration.Parameters;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
