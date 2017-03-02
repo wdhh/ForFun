@@ -11,6 +11,7 @@ import java.util.Scanner;
  */
 public class Task02Gifts {
     public static void main(String[] args) {
+        System.out.println("Input number of gifts (2-20) and amount of money (2-1000000000):");
         Scanner scanner = new Scanner(System.in);
         try {
             int n = scanner.nextInt();
@@ -22,7 +23,7 @@ public class Task02Gifts {
             }
 
             int[] arrGifts = new int[n];
-
+            System.out.println("Input price of gifts:");
             try {
                 for (int i = 0; i < n; i++) {
                     arrGifts[i] = scanner.nextInt();

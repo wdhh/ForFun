@@ -15,7 +15,7 @@ public class Task01Fibonacci {
         System.out.println("Input a integer number > 0 to receive Fibonacci number: ");
         try {
             number = scanner.nextInt();
-            if (number > 0) {
+            if (number >= 0) {
                 System.out.print("You entered ");
                 System.out.println(number);
                 System.out.println(Fibonacci(number));
@@ -31,9 +31,9 @@ public class Task01Fibonacci {
     }
 
     private static int Fibonacci(int num) {
-        if (num == 1) {
+        if (num == 0) {
             return 0;
-        } else if (num <= 3) {
+        } else if (num <= 2) {
             return 1;
         } else {
             int fib;
