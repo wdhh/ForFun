@@ -1,0 +1,8 @@
+$ find . -type f -iname test
+$ ls -a | grep "^[1-2].*\log\$"
+$ ls -l /d |grep ^-|grep "import"
+$ sed -e 's/https/http/g' d:/text.txt >d:/text.txt
+$ sed -i -e 's/:/ : /g'  d:/text.txt 
+$ sed -i -e 's/\(.\)\1/\1/g' d:/text.txt
+
+
