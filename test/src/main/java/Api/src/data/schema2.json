@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Product",
+  "description": "A product from catalog",
+  "type": "array",
+  "items": {
+    "title": "Product",
+    "type": "object",
+    "properties": {
+      "id": {
+        "description": "The unique identifier for a product",
+        "type": "integer"
+      },
+      "name": {
+        "description": "Name of the product",
+        "type": "string"
+      },
+      "price": {
+        "type": "number",
+        "minimum": 0,
+        "exclusiveMinimum": true
+      },
+      "count": {
+        "type": "integer",
+        "minimum": 0,
+        "exclusiveMinimum": true
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "mytype": {
+        "type": "string",
+        "enum": [
+          "phone",
+          "notebook"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "price"
+    ]
+  }
+}
